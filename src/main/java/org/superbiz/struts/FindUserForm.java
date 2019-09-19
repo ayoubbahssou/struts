@@ -18,7 +18,24 @@
 package org.superbiz.struts;
 
 import com.opensymphony.xwork2.ActionSupport;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FindUserForm extends ActionSupport {
+
+
+
+    private FindUser findUser;
+
+    public FindUserForm(FindUser findUser) {
+        this.findUser = findUser;
+    }
+
+    @Override
+    public String execute() {
+        //return findUser.execute();
+        return SUCCESS;
+    }
+
 
 }
