@@ -22,7 +22,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AddUserForm extends ActionSupport {
-
+/*
     private AddUser addUser;
 
     public AddUserForm(AddUser addUser) {
@@ -32,4 +32,6 @@ public class AddUserForm extends ActionSupport {
     public String execute() {
         return addUser.execute();
     }
+
+ */
 }

@@ -24,13 +24,15 @@ public class Application {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         filterRegistrationBean.setFilter(siteMeshFilter);
         filterRegistrationBean.addUrlPatterns("/*");
+        filterRegistrationBean.setOrder(1);
         return filterRegistrationBean;
     }
 
     @Bean
     public FilterRegistrationBean filterRegistrationBeanForSPEF (){
         StrutsPrepareAndExecuteFilter strutsPrepareAndExecuteFilter = new StrutsPrepareAndExecuteFilter();
-        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(strutsPrepareAndExecuteFilter);
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+        filterRegistrationBean.setFilter(strutsPrepareAndExecuteFilter);
         Collection<String> urlPatterns = new ArrayList<>();
         urlPatterns.add("/");
         urlPatterns.add("/addUserForm.action");
@@ -40,6 +42,7 @@ public class Application {
         urlPatterns.add("/listAllUsers.action");
 
         filterRegistrationBean.setUrlPatterns(urlPatterns);
+        filterRegistrationBean.setOrder(2);
         return filterRegistrationBean;
     }
 }

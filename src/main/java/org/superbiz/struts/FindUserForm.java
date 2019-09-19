@@ -22,7 +22,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class FindUserForm extends ActionSupport {
-
+/*
 
 
     private FindUser findUser;
@@ -36,6 +36,5 @@ public class FindUserForm extends ActionSupport {
         //return findUser.execute();
         return SUCCESS;
     }
-
-
+*/
 }
